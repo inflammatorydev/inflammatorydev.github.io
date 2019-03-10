@@ -56,7 +56,7 @@ The Queue is where the event loop puts a task to do at a later date because it i
 
 The Job Queue is where we put our resolved promises ready to be actioned. These can only be actioned after the call stack has been emptied of its task for that particular event loop.
 
-![Chinese Salty Egg](./updated-event-loop1.png)
+![Chinese Salty Egg](./assets/images/updated-event-loop1.png)
 
 _Clear as mud?_ Great, so lets go!
 
@@ -66,7 +66,7 @@ We kick off the event loop ... and we are now running from the very top of the s
 a();
 ```
 
-![Chinese Salty Egg](./updated-event-loop3.png)
+![Chinese Salty Egg](./assets/images/updated-event-loop3.png)
 
 OK, finally we are 'doing' something, so function 'a' goes onto the call stack and is executed, once complete it is removed from the call stack.
 
@@ -82,7 +82,7 @@ Finally we fire function 'd'. 'd' goes onto the call stack. The console log is f
 
 And thats it ... we are done. So how do things currently stand?
 
-![Chinese Salty Egg](./updated-event-loop6.png)
+![Chinese Salty Egg](./assets/images/updated-event-loop6.png)
 
 The call stack is now empty. In the Queue we have function 'c' and in the Job Queue we have function 'd'.
 
