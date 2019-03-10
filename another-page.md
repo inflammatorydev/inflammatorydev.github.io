@@ -98,6 +98,4 @@ So quick recap.
 
 Functions 'a' and 'd' are synchronous functions and put onto the Call Stack in turn and immediately fired. Then at the end of the event loop, BEFORE we tick over to the next event loop, we check the Jobs Queue for any resolved promises. We have one, function 'b', so we execute that, which means now we have logged out 'a', 'd' and 'b' ... then with one function left that can only be added during the next event loop, we do that and log out 'b' <br />... _giving us 'a', 'd', 'b' and 'c'_.
 
-_yay_
-
 [back](./)
