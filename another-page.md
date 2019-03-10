@@ -1,8 +1,4 @@
 ---
-title: The Javascript event loop ... when does your function actually get called?
-category: javascript
-status: public
-date: "2019-01-01T22:12:03.284Z"
 layout: default
 ---
 
