@@ -47,6 +47,7 @@ But to do this very simple task involves co-operation between Javascript and the
 So the greetings function. That's Javascript.
 
 But the setTimeout function ... well thats a function in the window object that has been provided by the BOM. These set of functions can better be referred to as the Web API's. A set of API's provided by the browser for Javascript to call. Javascript has no clue as to what setTimeout does, but the Web API's do. So when Javascript dutifully calls setTimeout, passing with it the 'greetings' function and a time (3000 milliseconds), the Web API's then use the browser's internal timer to count to 3000. Once complete, it knows its needs to pass the greetings function BACK to the javascript to be processed. So after 3 seconds, the greetings function is put onto the javascript queue which in turn is then placed onto the callstack. Javascript then executes the greetings function which then console logs out a 'Hello There'.
+<br>
 
 ## Javascript and Web API's
 
@@ -64,7 +65,7 @@ If it didnt have the browser to lend a helping hand, it would literally have to 
 
 So anything to do with asynchronicity is, in reality, passed to the browser to processs ... Javascript then continues along on its merry way with the rest of its functions. Once the browser has a return value for Javascript it pops it on the queue, to be processed when Javascript is ready for it.
 
-And this happens with a LOT of the functions you use. Fetch, onResize ... these are all provided by the browser through the window object. Javascript doesn't have a clue what they do, but it knows that the browser does. So it invokes these functions at which point the browser says 'Ive got this ...' and its the browser which in fact deals with the function ... passing the return value back to javascript.
+And this happens with **a LOT** of the functions you use. Fetch, onResize ... these are all provided by the browser through the window object. Javascript doesn't have a clue what they do, but it knows that the browser does. So it invokes these functions at which point the browser says 'Ive got this ...' and its the browser which in fact deals with the function ... passing the return value back to javascript.
 
 So what functions, properties etc ARE part of javascript? Well check out this handy page by MDN which goes through them.
 
