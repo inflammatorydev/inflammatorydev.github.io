@@ -4,9 +4,7 @@ layout: default
 
 # Javascript and the BOM
 
-**Question**:
-
-Which of the following is part of Javascript?
+**Question:** Which of the following is part of Javascript?
 
 ```
 setTimeout
@@ -47,15 +45,19 @@ But to do this very simple task involves co-operation between Javascript and the
 
 So the greetings function. That's Javascript.
 
-But the setTimeout function ... well thats a function in the window object that has been provided by the BOM. These set of functions can better be referred to as the Web API's. Javascript has no clue as to what setTimeout does, but the Web API's do. So when Javascript dutifully calls setTimeout, passing with it the 'greetings' function and a time (3000 milliseconds), the Web API's then use the browser's internal timer to count to 3000. Once complete, it knows its needs to pass the greetings function BACK to the javascript to be processed. So after 3 seconds, the greetings function is put onto the javascript queue which in turn is then placed onto the callstack. Javascript then executes the greetings function which then console logs out a 'Hello There'.
+But the setTimeout function ... well thats a function in the window object that has been provided by the BOM. These set of functions can better be referred to as the Web API's. A set of API's provided by the browser for Javascript to call. Javascript has no clue as to what setTimeout does, but the Web API's do. So when Javascript dutifully calls setTimeout, passing with it the 'greetings' function and a time (3000 milliseconds), the Web API's then use the browser's internal timer to count to 3000. Once complete, it knows its needs to pass the greetings function BACK to the javascript to be processed. So after 3 seconds, the greetings function is put onto the javascript queue which in turn is then placed onto the callstack. Javascript then executes the greetings function which then console logs out a 'Hello There'.
 
-![Chinese Salty Egg](./assets/images/javascript-bom2.jpg)
+##Javascript and Web API's
+
+![Javascript and the BOM](./assets/images/javascript-bom2.jpg)
 
 So quick recap. A call to setTimeout involves passing a function from Javascript, to the Web API. The Web API uses the browsers internal timer to count to 3000, then passes BACK to javascript the function you passed in ie the greetings function.
 
 So this is all well and good, but why is this important?
 
-Well you have just discovered how Javascript ... which is completely synchronous and single threaded, is able to provide asynchronous functionality.
+**Well you have just discovered how Javascript ... which is completely synchronous and single threaded, is able to provide asynchronous functionality.**
+
+![Interesting](http://www.playbook.media/wp-content/uploads/2018/12/branded-merchandise.jpg)
 
 If it didnt have the browser to lend a helping hand, it would literally have to block EVERYTHING for 3 seconds, until the timer has finished then it would continue on with the script. Now imagine having multiple asynchronous calls, this would be a disaster with javascipt constantly locking up all the time (we'll ignore the fact that Javascript doesn't even have timer functionality to do this anyway).
 
