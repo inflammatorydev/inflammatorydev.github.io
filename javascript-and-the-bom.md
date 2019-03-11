@@ -45,11 +45,11 @@ But to do this very simple task involves co-operation between Javascript and the
 
 So the greetings function. That's Javascript.
 
-But the setTimeout function ... well thats a function in the window object that has been provided by the BOM. Javascript has no clue as to what setTimeout does. It just knows that the window object has provided it, so it dutifully calls setTimeout, passing with it the 'greetings' function and a time (3000 milliseconds). The browser then uses it's internal timer to count to 3000. Once complete, it knows its needs to pass the greetings function BACK to the javascript to be processed. So after 3 seconds, the greetings function is put onto the javascript queue which in turn is then placed onto the callstack. Javascript then executes the greetings function which then console logs out a 'Hello There'.
+But the setTimeout function ... well thats a function in the window object that has been provided by the BOM. These set of functions can better be referred to as the Web API's. Javascript has no clue as to what setTimeout does, but the Web API's do. So when Javascript dutifully calls setTimeout, passing with it the 'greetings' function and a time (3000 milliseconds), the Web API's then use the browser's internal timer to count to 3000. Once complete, it knows its needs to pass the greetings function BACK to the javascript to be processed. So after 3 seconds, the greetings function is put onto the javascript queue which in turn is then placed onto the callstack. Javascript then executes the greetings function which then console logs out a 'Hello There'.
 
-![Chinese Salty Egg](./assets/images/javascript-bom1.jpg)
+![Chinese Salty Egg](./assets/images/javascript-bom2.jpg)
 
-So quick recap. A call to setTimeout involves passing a function from Javascript, to the browser. The browser uses its own timer to count to 3000, then passes BACK to javascript the function you passed in ie the greetings function.
+So quick recap. A call to setTimeout involves passing a function from Javascript, to the Web API. The Web API uses the browsers internal timer to count to 3000, then passes BACK to javascript the function you passed in ie the greetings function.
 
 So this is all well and good, but why is this important?
 
@@ -63,7 +63,7 @@ And this happens with a LOT of the functions you use. Fetch, onResize ... these 
 
 So what functions, properties etc ARE part of javascript? Well check out this handy page by MDN which goes through them.
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects</a>
 
 But the big takeaway is this ... What you probably thought was 'Javascript' is in reality two different things, Javascript and the Browser working hand in hand. Passing values and functions to each other to be processed in a clever non-blocking way.
 
