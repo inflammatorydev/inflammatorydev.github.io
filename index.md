@@ -4,7 +4,17 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
+## Javascript, the Event Loop and the Job Queue
+
+The order in which asynchronous events are processed can vary depending on what time of events they are.
+
+A closer look at where asynchronous events end up and when they are processed.
+
 [Link to another page](./javascript-event-loop.html).
+
+## Javascript and the BOM
+
+Javascript is synchronous ... so if that's true, how is it able to perform asynchronous tasks. Here we look at how Javascript has a helper in the BOM (Browser Object Model) to help out.
 
 [Link to new blog post](./javascript-and-the-bom.html).
 
