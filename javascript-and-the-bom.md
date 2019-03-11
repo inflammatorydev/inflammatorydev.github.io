@@ -4,6 +4,7 @@ layout: default
 
 # Javascript and the BOM
 
+<br>
 **Question:** Which of the following is part of Javascript?
 
 ```
@@ -47,7 +48,7 @@ So the greetings function. That's Javascript.
 
 But the setTimeout function ... well thats a function in the window object that has been provided by the BOM. These set of functions can better be referred to as the Web API's. A set of API's provided by the browser for Javascript to call. Javascript has no clue as to what setTimeout does, but the Web API's do. So when Javascript dutifully calls setTimeout, passing with it the 'greetings' function and a time (3000 milliseconds), the Web API's then use the browser's internal timer to count to 3000. Once complete, it knows its needs to pass the greetings function BACK to the javascript to be processed. So after 3 seconds, the greetings function is put onto the javascript queue which in turn is then placed onto the callstack. Javascript then executes the greetings function which then console logs out a 'Hello There'.
 
-##Javascript and Web API's
+## Javascript and Web API's
 
 ![Javascript and the BOM](./assets/images/javascript-bom2.jpg)
 
