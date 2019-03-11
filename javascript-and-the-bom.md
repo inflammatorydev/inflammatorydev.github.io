@@ -2,7 +2,9 @@
 layout: default
 ---
 
-Question:
+# Javascript and the BOM
+
+**Question**:
 
 Which of the following is part of Javascript?
 
@@ -17,7 +19,7 @@ If you said 'only parseInt, the rest are not part of javascript' then congratula
 
 For the remainder however, it comes as a surprise to a lot of people that setTimeout isn't part of Javascript. If you don't believe me, go to the official spec for Javascript (ECMA=262)
 
-https://www.ecma-international.org/ecma-262
+<a href="https://www.ecma-international.org/ecma-262">https://www.ecma-international.org/ecma-262</a>
 
 and try to find setTimeout. It's not there. So if it's not there ... and if fetch isn't part of Javascript, nor onResize ... then how does Javascript know what Im talking about when I use these commands in my scripts.
 
